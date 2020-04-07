@@ -1,0 +1,546 @@
+@font-face {
+  font-family: 'Sansation';
+  src: url('resources/font/Sansation-Light-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Sansation';
+  src: url('resources/font/Sansation-LightItalic-webfont.woff') format('woff');
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Sansation';
+  src: url('resources/font/Sansation-Bold-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Magenta';
+  src: url('resources/font/Magenta_BBT-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sansation";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.8em;
+  color: #5D6063;
+}
+
+h1 {
+  font-family: 'Magenta';
+  font-weight: 300;
+  font-size: 170px;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+
+
+
+/* Header Menu Style */
+
+.header {
+  background-image: url(resources/images/smart.png);
+  min-height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.header ul {
+  background-color: #5398a7;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.header li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: black;
+  background-color: #99cccc;
+}
+
+.title {
+  position: absolute;
+  color: #5398a7;
+  margin-left: 40px;
+  margin-top: 130px;
+}
+/* Menu */
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #5398a7;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #5398a7;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+
+
+/* Body Style */
+article {
+  padding: 30px;
+}
+
+h1, h2, h3, h4 {
+  color: #5398a7;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  margin: 20px;
+}
+
+
+/* Progetti */
+.activities {
+  display: flex;
+  justify-content: center;
+}
+
+.pasvol, .demetra {
+  text-align: center;
+  border-radius: 40px;
+  margin: 38px;
+  background-color: #F0EFF6;
+  box-shadow: inset -2px -2px rgba(0,0,0,.3), inset 2px 2px rgba(255,255,255,.3);
+  padding: 10px 15px;
+  }
+
+.demetra img, .pasvol img {
+    max-width: 120px;
+  }
+
+.demetra:active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 90px rgba(0,0,0,.05) inset;
+}
+
+.pasvol:active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 90px rgba(0,0,0,.05) inset;
+}
+
+#cta-insta, #cta-face {
+  text-decoration: none;
+}
+
+#cta {
+  display: block;
+  margin: auto;
+  width: 180px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 40px;
+  background-color: #51B451;
+  box-shadow: inset -2px -2px rgba(0,0,0,.3), inset 2px 2px rgba(255,255,255,.3);
+  padding: 15px 30px;
+}
+
+#cta:active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 90px rgba(0,0,0,.05) inset;
+
+}
+
+#cta h3 {
+  color: white;
+}
+
+/* Passioni */
+.passions li {
+  text-align: center;
+  padding: 10px;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.passions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.passions li h4 {
+  padding: 10px 30px;
+}
+
+/* Contact section */
+section {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.contact li {
+  margin: 15px;
+}
+
+.social img {
+  width: 40px;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.contact, .social {
+  background-color: black;
+  color: white;
+  flex: 1;
+  padding: 20px 50px;
+}
+
+.mailbox img {
+  margin-left: 20px;
+}
+
+.contact a {
+  position: relative;
+  bottom: 20px;
+  left: 10px;
+}
+
+#mail {
+  text-decoration: none;
+  color: #5398a7;
+}
+
+#mail:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+footer {
+  margin: auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 100%;
+  font-size: 12px;
+  border: 1px solid black;
+}
+
+/* Project.html */
+figcaption {
+  font-size: 11px;
+}
+
+.pasvol-container {
+  display: flex;
+}
+
+.testo {
+  order: 1
+}
+
+.picture {
+  order: 2;
+}
+
+.pasvol-container ul {
+  margin-left: 35px;
+}
+
+#foto {
+  margin-top: 20px;
+}
+
+#foto img {
+  max-height: 400px;
+}
+
+#atelier {
+  text-align: center;
+}
+
+#atelier img {
+  max-width: 600px;
+}
+
+
+/* Mobile styles */
+@media only screen and (max-width:400px) {
+  .bg-img {
+    background-image: url(resources/images/smart-small.png);
+    min-height: 120px;
+  }
+
+  .bio figure {
+    text-align: center;
+  }
+
+  article p {
+    text-align: justify;
+  }
+
+  .mailbox img {
+    margin-left: 0px;
+  }
+
+  #cta {
+    width: 160px;
+    font-size: 15px;
+  }
+  .demetra img, .pasvol img {
+    max-width: 50px;
+    font-size: 15px;
+  }
+}
+
+/* Tablet styles */
+@media only screen and (min-width:401px) and (max-width: 960px) {
+
+  .design,
+  .marketing,
+  .tecnologia,
+  .business {
+    width: 50%;
+  }
+  .bio figure {
+    text-align: center;
+  }
+  article p {
+    text-align: justify;
+  }
+  #cta {
+    width: 160px;
+    font-size: 15px;
+  }
+  .demetra img, .pasvol img {
+    max-width: 100px;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width:961px) {
+  article {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  .bio {
+    display: flex;
+    justify-content: center;
+  }
+  .bio figure {
+    order: 2;
+  }
+  .bio p {
+    order: 1;
+  }
+  .design,
+  .marketing,
+  .tecnologia,
+  .business {
+    width: 25%;
+  }
+}
+
+/* Header Menu Styles */
+
+@media (min-width: 830px) {
+  .header li {
+    background-color: black;
+  }
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: left;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  .header li a:hover,
+  .header .menu-btn:hover {
+    color: #5398a7;
+    background-color: inherit;
+  }
+}
+
+@media only screen and (min-width:460px) and (max-width:829px) {
+  h1 {
+    font-size: 120px;
+  }
+}
+
+@media only screen and (max-width:459px) {
+  h1 {
+    font-size: 80px;
+  }
+  .title {
+    margin-left: 10px;
+    margin-top: 160px;
+  }
+  .header {
+    background-image: url(resources/images/smart.jpg);
+    min-height: 200px;
+    }
+}
+
+/* Section contact styles */
+@media only screen and (max-width:830px) {
+  section {
+    display: block;
+  }
+  section p, section li {
+    text-align: justify;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+  .mailbox {
+    display: flex;
+    justify-content: center;
+  }
+  #mail {
+    bottom: -9px;
+  }
+}
+
+/* project.html articles layout */
+@media (max-width: 716px) {
+  #foto img {
+    max-height: 200px;
+  }
+  #foto {
+    display: block;
+    text-align: center;
+  }
+  .pasvol-container {
+    display: block;
+  }
+  #atelier img {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 716px) {
+  .pasvol-container {
+    display: flex;
+  }
+  .testo {
+    order: 1;
+  }
+  .pasvol-container picture {
+    order: 2;
+  }
+}
